@@ -30,7 +30,7 @@ class Book(models.Model):
     surname_author = models.CharField(max_length=50, verbose_name='Фамилия автора')
     date_of_publication = models.DateField(auto_now_add=False, auto_now=False)
     publisher = models.CharField(max_length=20, choices=CHOICE_PUBLISHER)
-    salary = models.DecimalField(max_digits=7, decimal_places=2)
+    salary = models.DecimalField(max_digits=7, decimal_places=2, default=0)
 
     def __str__(self):
         return 'Название книги - {0}, Имя Автора - {1}, Фамилия автора - {2}, Дата публикации - {3}, Издатель - {4}, Цена - {5}'.format(

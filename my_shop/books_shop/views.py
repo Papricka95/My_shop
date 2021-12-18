@@ -10,7 +10,7 @@ class MainView(TemplateView):
     ctx = {}
 
     def get(self, request):
-
+        ctx = {}
         return render(request, self.template_name, ctx)
 
 

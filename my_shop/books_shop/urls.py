@@ -4,5 +4,5 @@ from books_shop import views
 
 urlpatterns = [
     # url(r'^$', views.MainView.as_view()),
-    path('/', views.MainView.as_view()),
+    path('', views.MainView.as_view()),
 ]
