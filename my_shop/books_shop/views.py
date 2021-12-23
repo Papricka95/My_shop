@@ -11,7 +11,7 @@ class MainView(TemplateView):
     template_name = 'main_page.html'
     ctx = {}
 
-    def get(self, request):
+    def get(self, request, **kwargs):
         ctx = {}
 
         return render(request, self.template_name, ctx)
@@ -26,6 +26,9 @@ class RegisterFormView(FormView):
     def form_valid(self, form):
         form.save()
         return super(RegisterFormView, self).form_valid(form)
+
+    def form_invalid(self, form):
+        return super(RegisterFormView, self).form_invalid(form)
 
 
 class LoginFormView(FormView):
