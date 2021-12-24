@@ -18,10 +18,9 @@ class MainView(TemplateView):
         ctx = {}
         # тут должна быть проверка пользователя на авторизованность на сайте
         # и только после этого будет показываться все данные. Но пока оставим так
-        all_books = Book.object.all()
+        all_books = Book.objects.all() # Считываем все книги, которые хранятся в БД
         ctx['books'] = all_books
-        ctx['books_form'] = self.book_form
-
+        ctx['books_form'] = self.book_form # Перекидываем форму, которая будет отображаться пользователю в шаблоне
         return render(request, self.template_name, ctx)
         # return JsonResponse({'Response': true})
 
