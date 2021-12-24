@@ -6,13 +6,21 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.generic import TemplateView, FormView
 
+from books_shop.forms import BookForm
+from books_shop.models import Book
+
 
 class MainView(TemplateView):
     template_name = 'main_page.html'
-    ctx = {}
+    book_form = BookForm
 
     def get(self, request, **kwargs):
         ctx = {}
+        # тут должна быть проверка пользователя на авторизованность на сайте
+        # и только после этого будет показываться все данные. Но пока оставим так
+        all_books = Book.object.all()
+        ctx['books'] = all_books
+        ctx['books_form'] = self.book_form
 
         return render(request, self.template_name, ctx)
         # return JsonResponse({'Response': true})

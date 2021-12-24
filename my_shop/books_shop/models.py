@@ -7,30 +7,13 @@ class Book(models.Model):
         ('ast', 'АСТ'),
         ('eksmo', 'Эксмо'),
     )
-    #
-    # POSITION_CHOICES = (
-    #     ('senior', 'Senior'),
-    #     ('middle', 'Middle'),
-    #     ('junior', 'Junior')
-    # )
 
-    # PYTHON = 'python'
-    # JAVASCRIPT = 'javascript'
-    # CS = 'c#'
-    # CPP = 'cpp'
-    #
-    # LANGUAGE_CHOICES = (
-    #     (PYTHON, 'Python'),
-    #     (JAVASCRIPT, 'Javascript'),
-    #     (CS, 'C#'),
-    #     (CPP, 'C++')
-    # )
     name_book = models.CharField(max_length=255, verbose_name='Название книги')
     name_author = models.CharField(max_length=50, verbose_name='Имя автора')
     surname_author = models.CharField(max_length=50, verbose_name='Фамилия автора')
-    date_of_publication = models.DateField(auto_now_add=False, auto_now=False)
-    publisher = models.CharField(max_length=20, choices=CHOICE_PUBLISHER)
-    salary = models.DecimalField(max_digits=7, decimal_places=2, default=0)
+    date_of_publication = models.DateField(auto_now_add=False, auto_now=False, verbose_name='Дата публикации')
+    publisher = models.CharField(max_length=20, choices=CHOICE_PUBLISHER, verbose_name='Издатель')
+    salary = models.DecimalField(max_digits=7, decimal_places=2, default=0, verbose_name='Цена')
 
     def __str__(self):
         return 'Название книги - {0}, Имя Автора - {1}, Фамилия автора - {2}, Дата публикации - {3}, Издатель - {4}, Цена - {5}'.format(
