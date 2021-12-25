@@ -8,17 +8,19 @@ class Book(models.Model):
         ('eksmo', 'Эксмо'),
     )
 
-    name_book = models.CharField(max_length=255, verbose_name='Название книги')
     name_author = models.CharField(max_length=50, verbose_name='Имя автора')
     surname_author = models.CharField(max_length=50, verbose_name='Фамилия автора')
+    name_book = models.CharField(max_length=255, verbose_name='Название книги')
+    genre_of_book = models.CharField(max_length=50, verbose_name="Жанр книги", default="Без жанра")
     date_of_publication = models.DateField(auto_now_add=False, auto_now=False, verbose_name='Дата публикации')
     publisher = models.CharField(max_length=20, choices=CHOICE_PUBLISHER, verbose_name='Издатель')
     salary = models.DecimalField(max_digits=7, decimal_places=2, default=0, verbose_name='Цена')
 
     def __str__(self):
-        return 'Название книги - {0}, Имя Автора - {1}, Фамилия автора - {2}, Дата публикации - {3}, Издатель - {4}, Цена - {5}'.format(
-            self.name_book, self.name_author, self.surname_author, self.date_of_publication, self.publisher,
-            self.salary)
+        return 'Имя Автора - {0}, Фамилия автора - {1}, Название книги - {2}, Жанр книги - {3}, Дата публикации - {4}, ' \
+               'Издатель - {5}, Цена - {6},'.format(self.name_author, self.surname_author, self.name_book,
+                                                    self.genre_of_book, self.date_of_publication, self.publisher,
+                                                    self.salary)
 
     def dict(self):
         obj = {
