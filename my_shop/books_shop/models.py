@@ -18,7 +18,7 @@ class Book(models.Model):
 
     def __str__(self):
         return 'Имя Автора - {0}, Фамилия автора - {1}, Название книги - {2}, Жанр книги - {3}, Дата публикации - {4}, ' \
-               'Издатель - {5}, Цена - {6},'.format(self.name_author, self.surname_author, self.name_book,
+               'Издатель - {5}, Цена - {6}'.format(self.name_author, self.surname_author, self.name_book,
                                                     self.genre_of_book, self.date_of_publication, self.publisher,
                                                     self.salary)
 

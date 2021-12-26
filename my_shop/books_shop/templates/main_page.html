@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Путь фрилансера - сайт книги</title>
+    <title>Добро пожаловать в книжный магазин!</title>
     <!-- normalize.css was include to current page for correct view on other browsers -->
     <link rel="stylesheet" href="../../static/css/normalize.css" />
     <link rel="stylesheet" href="../../static/css/style.css" />
@@ -12,43 +12,81 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+
   </head>
   <body>
 <header class="header">
     <div class="header-container">
         <div class="span logo">Книжный магазин</div>
         <nav class="nav">
-            <a href="" class="nav-link">Жанры</a>
-            <a href="" class="nav-link">Авторы</a>
-            <a href="" class="nav-link"></a>
+            <a href="#" class="nav-link">Новинки</a>
+            <a href="#" class="nav-link">Авторы</a>
+            <a href="#" class="nav-link">Подписка</a>
         </nav>
+        <a href="#" class="login">Личный кабинет</a>
     </div>
+    <!--/.header-container -->
 </header>
+<!-- Главная секция -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="slider">
+            <div class="slider-line">
+              <img
+                src="../../static/img/Picture_one.jpg"
+                alt="Eskanor"
+                class="picture_slider"
+              />
+              <img
+                src="../../static/img/Picture_two.jpg"
+                alt="Crazy cat"
+                class="picture_slider"
+              />
+              <img
+                src="../../static/img/Picture_three.jpg"
+                alt="alchimik"
+                class="picture_slider"
+              />
+              <img
+                src="../../static/img/Picture_four.jpg"
+                alt="Jungus"
+                class="picture_slider"
+              />
+            </div>
+            <!--./slider-line -->
+      </div>
+      <!-- /.slider -->
+      <div class="buttons-slider">
+      <button class="button slider-prev">Prev</button>
+      <button class="button slider-next">Next</button>
+      </div>
+    </div>
+</section>
 
 
 
-<table id="table_id" border="1" cellpadding="7px">
-    <tr style="background: blue; color: white">
-        <td>Название книги</td>
-        <td>Имя автора</td>
-        <td>Фамилия автора</td>
-        <td>Дата публикации</td>
-        <td>Издатель</td>
-        <td>Цена</td>
+<!--<table id="table_id" border="1" cellpadding="7px">-->
+<!--    <tr style="background: blue; color: white">-->
+<!--        <td>Название книги</td>-->
+<!--        <td>Имя автора</td>-->
+<!--        <td>Фамилия автора</td>-->
+<!--        <td>Дата публикации</td>-->
+<!--        <td>Издатель</td>-->
+<!--        <td>Цена</td>-->
 
-    </tr>
+<!--    </tr>-->
 
-  {% for book in books %}
-      <tr>
-        <td>{{ book.name_book }}</td>
-        <td>{{ book.name_author }}</td>
-        <td>{{ book.surname_author }}</td>
-        <td>{{ book.date_of_publication }}</td>
-        <td>{{ book.publisher }}</td>
-        <td>{{ book.salary }}</td>
-      </tr>
-  {% endfor %}
-  </table>
+<!--  {% for book in books %}-->
+<!--      <tr>-->
+<!--        <td>{{ book.name_book }}</td>-->
+<!--        <td>{{ book.name_author }}</td>-->
+<!--        <td>{{ book.surname_author }}</td>-->
+<!--        <td>{{ book.date_of_publication }}</td>-->
+<!--        <td>{{ book.publisher }}</td>-->
+<!--        <td>{{ book.salary }}</td>-->
+<!--      </tr>-->
+<!--  {% endfor %}-->
+<!--  </table>-->
 <!--    &lt;!&ndash; Шапка сайта &ndash;&gt;-->
 <!--    <header class="header">-->
 <!--      <div class="header-container">-->
@@ -207,5 +245,7 @@
 <!--    <a href="#" class="to-top">-->
 <!--      <img src="../../static/img/arrow.png" alt="стрелочка на верх">-->
 <!--    </a>-->
+
+<script src="../../static/js/javascript.js" defer></script>
   </body>
 </html>
