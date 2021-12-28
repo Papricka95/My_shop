@@ -16,7 +16,7 @@
   </head>
   <body>
 <header class="header">
-    <div class="header-container">
+    <div class="container">
         <div class="span logo">Книжный магазин</div>
         <nav class="nav">
             <a href="#" class="nav-link">Новинки</a>
@@ -29,38 +29,64 @@
 </header>
 <!-- Главная секция -->
 <section class="hero">
-    <div class="hero-container">
-        <div class="slider">
-            <div class="slider-line">
+    <div class="container">
+      <div class="slider">
+        <div class="slider-line">
               <img
-                src="../../static/img/Picture_one.jpg"
+                src="../../static/img/Harry_potter_1.jpg"
                 alt="Eskanor"
-                class="picture_slider"
+                class="picture_slider book1"
               />
               <img
-                src="../../static/img/Picture_two.jpg"
+                src="../../static/img/Harry_potter_4.jpg"
                 alt="Crazy cat"
-                class="picture_slider"
+                class="picture_slider "
               />
               <img
-                src="../../static/img/Picture_three.jpg"
+                src="../../static/img/Harry_potter_1.jpg"
                 alt="alchimik"
-                class="picture_slider"
+                class="picture_slider book"
               />
               <img
-                src="../../static/img/Picture_four.jpg"
+                src="../../static/img/Harry_potter_4.jpg"
                 alt="Jungus"
                 class="picture_slider"
               />
-            </div>
-            <!--./slider-line -->
+        </div>
+        <!--./slider-line -->
+        <div class="buttons-slider">
+        <button class="button slider-prev">Prev</button>
+        <button class="button slider-next">Next</button>
+      </div>
       </div>
       <!-- /.slider -->
-      <div class="buttons-slider">
-      <button class="button slider-prev">Prev</button>
-      <button class="button slider-next">Next</button>
+      <div class="hero-text">
+          <span class="author">автор книги (из БД!)</span>
+          <h1 class="title">Название книги</h1>
+          <div class="info">
+            <span class="info-text datepublication">Год выпуска:</span>
+            <span class="info-text genre">Жанр книги: </span>
+            <span class="info-text publisher">Издатель: </span>
+            <span class="info-text salary">Цена: </span>
+            <span class="info-text age">Возрастные ограничения: 12+</span>
+          </div>
+          <!-- /.info -->
+          <div class="price">
+            <span class="pricetag">490 Р</span>
+            <a href="" class="favorites">Добавить в избранное</a>
+          </div>
+          <!-- /.price -->
+          <div class="buttons">
+            <button class="button button-primary">Читать отрывок</button
+            ><a href="https://yandex.ru" class="button button-outline"
+              >Купить книгу</a
+            >
+          </div>
+          <!-- /.buttons -->
       </div>
+        <!-- /.hero-text -->
     </div>
+    <!-- /.container -->
 </section>
 
 
